@@ -109,13 +109,13 @@
                     <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
                         <span class="user-img"><img class="rounded-circle" src="assets/img/user.jpg" width="40" alt="Admin">
 							<span class="status online"></span></span>
-                        <span>Admin</span>
+                        <span class="displayedUsername" />
                     </a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="profile.html">My Profile</a>
 						<a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
 						<a class="dropdown-item" href="settings.html">Settings</a>
-						<a class="dropdown-item" href="login.html">Logout</a>
+						<a class="dropdown-item logoutBtn" href="login.html">Logout</a>
 					</div>
                 </li>
             </ul>
@@ -125,7 +125,7 @@
                     <a class="dropdown-item" href="profile.html">My Profile</a>
                     <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
                     <a class="dropdown-item" href="settings.html">Settings</a>
-                    <a class="dropdown-item" href="login.html">Logout</a>
+                    <a class="dropdown-item logoutBtn" href="login.html">Logout</a>
                 </div>
             </div>
         </div>
@@ -138,22 +138,22 @@
                             <a href="index-2.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                         </li>
 						<li>
-                            <a href="doctors.html"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
+                            <a href="doctors.html" class="menu-doctors"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
                         </li>
                         <li>
-                            <a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
+                            <a href="patients.html" class="menu-patients"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
                         </li>
                         <li>
-                            <a href="appointments.html"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
+                            <a href="appointments.html" class="menu-appointments"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
                         </li>
                         <li>
-                            <a href="schedule.html"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span></a>
+                            <a href="schedule.html" class="menu-schedule"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span></a>
                         </li>
                         <li>
-                            <a href="departments.html"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
+                            <a href="departments.html" class="menu-departments"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
                         </li>
 						<li class="submenu">
-							<a href="#"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
+							<a href="#" class="menu-employees"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
 								<li><a href="employees.html">Employees List</a></li>
 								<li><a href="leaves.html">Leaves</a></li>
@@ -162,7 +162,7 @@
 							</ul>
 						</li>
 						<li class="submenu">
-							<a href="#"><i class="fa fa-money"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
+							<a href="#" class="menu-accounts"><i class="fa fa-money"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
 								<li><a class="active" href="invoices.html">Invoices</a></li>
 								<li><a href="payments.html">Payments</a></li>
@@ -172,17 +172,17 @@
 							</ul>
 						</li>
 						<li class="submenu">
-							<a href="#"><i class="fa fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
+							<a href="#" class="menu-payroll"><i class="fa fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
 								<li><a href="salary.html"> Employee Salary </a></li>
 								<li><a href="salary-view.html"> Payslip </a></li>
 							</ul>
 						</li>
                         <li>
-                            <a href="chat.html"><i class="fa fa-comments"></i> <span>Chat</span> <span class="badge badge-pill bg-primary float-right">5</span></a>
+                            <a href="chat.html" class="menu-chat"><i class="fa fa-comments"></i> <span>Chat</span> <span class="badge badge-pill bg-primary float-right">5</span></a>
                         </li>
                         <li class="submenu">
-                            <a href="#"><i class="fa fa-video-camera camera"></i> <span> Calls</span> <span class="menu-arrow"></span></a>
+                            <a href="#" class="menu-calls"><i class="fa fa-video-camera camera"></i> <span> Calls</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
                                 <li><a href="voice-call.html">Voice Call</a></li>
                                 <li><a href="video-call.html">Video Call</a></li>
@@ -190,7 +190,7 @@
                             </ul>
                         </li>
                         <li class="submenu">
-                            <a href="#"><i class="fa fa-envelope"></i> <span> Email</span> <span class="menu-arrow"></span></a>
+                            <a href="#" class="menu-email"><i class="fa fa-envelope"></i> <span> Email</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
                                 <li><a href="compose.html">Compose Mail</a></li>
                                 <li><a href="inbox.html">Inbox</a></li>
@@ -198,7 +198,7 @@
                             </ul>
                         </li>
                         <li class="submenu">
-                            <a href="#"><i class="fa fa-commenting-o"></i> <span> Blog</span> <span class="menu-arrow"></span></a>
+                            <a href="#" class="menu-blog"><i class="fa fa-commenting-o"></i> <span> Blog</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
                                 <li><a href="blog.html">Blog</a></li>
                                 <li><a href="blog-details.html">Blog View</a></li>
@@ -207,13 +207,13 @@
                             </ul>
                         </li>
 						<li>
-							<a href="assets.html"><i class="fa fa-cube"></i> <span>Assets</span></a>
+							<a href="assets.html" class="menu-assets"><i class="fa fa-cube"></i> <span>Assets</span></a>
 						</li>
 						<li>
-							<a href="activities.html"><i class="fa fa-bell-o"></i> <span>Activities</span></a>
+							<a href="activities.html" class="menu-activities"><i class="fa fa-bell-o"></i> <span>Activities</span></a>
 						</li>
 						<li class="submenu">
-							<a href="#"><i class="fa fa-flag-o"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
+							<a href="#" class="menu-reports"><i class="fa fa-flag-o"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
 								<li><a href="expense-reports.html"> Expense Report </a></li>
 								<li><a href="invoice-reports.html"> Invoice Report </a></li>
