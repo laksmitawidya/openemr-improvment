@@ -58,11 +58,40 @@ $(document).ready(function ($) {
 
     init();
     setMenus();
+    //Change index url by role
+    $(document).on('click', 'form.form-signin', function () {
+        let $selectedRole = $('.form-signin').find(":selected").text();
+        let index = "index-2.html"
+        if($selectedRole.toLowerCase().includes("clinician")){
+            index = "index-clinician.html"
+        }
+        if($selectedRole.toLowerCase().includes("accountant")){
+            index = "index-accountant.html"
+        }
+        if($selectedRole.toLowerCase().includes("physician")){
+            index = "index-physician.html"
+        }
+        if($selectedRole.toLowerCase().includes("receptionist")){
+            index = "index-receptionist.html"
+        }
+        if($selectedRole.toLowerCase().includes("admin")){
+            index = "index-2.html"
+        }
+        if($selectedRole.toLowerCase().includes("patient")){
+            index = "index-2.html"
+        }
+
+        document.getElementById('form-signin2').action = index;
+
+
+    });
     $(document).on('submit', 'form.form-signin', function () {
         const $selectedRole = $('.form-signin').find(":selected").text();
         const $selectedUsername = $('.form-signin').find('input[name="username"]').val();
         localStorage.setItem('roles', $selectedRole);
         localStorage.setItem('username', $selectedUsername);
+        
+       
     });
 
     $(document).on('click', '.logoutBtn', function () {
@@ -77,12 +106,18 @@ $(document).ready(function ($) {
         $(".displayedUsername").text(retrievedUsername);
     }
     if (retrievedRoles) {
+
+
         if (retrievedRoles.toLowerCase().includes("clinician")) {
             $('.menu-appointments').show();
             $('.menu-schedule').show();
             $('.menu-chat').show();
             $('.menu-reports').show();
             $('.menu-calls').show();
+
+            document.getElementById("dashboard-menu").href = "index-clinician.html";
+            document.getElementById("dashboard-logo").href = "index-clinician.html";
+
         }
 
         if (retrievedRoles.toLowerCase().includes("physician")) {
@@ -93,6 +128,11 @@ $(document).ready(function ($) {
             $('.menu-reports').show();
             $('.menu-calls').show();
             $('.menu-activities').show();
+
+            document.getElementById("dashboard-menu").href = "index-physician.html";
+            document.getElementById("dashboard-logo").href = "index-physician.html";
+
+
         }
 
         if (retrievedRoles.toLowerCase().includes("accountant")) {
@@ -101,6 +141,11 @@ $(document).ready(function ($) {
             $('.menu-employees').show();
             $('.menu-departments').show();
             $('.menu-reports').show();
+
+            document.getElementById("dashboard-menu").href = "index-accountant.html";
+            document.getElementById("dashboard-logo").href = "index-accountant.html";
+
+            
         }
 
         if (retrievedRoles.toLowerCase().includes("receptionist")) {
@@ -110,6 +155,12 @@ $(document).ready(function ($) {
             $('.menu-reports').show();
             $('.menu-calls').show();
             $('.menu-activities').show()
+
+            document.getElementById("dashboard-menu").href = "index-receptionist.html";
+            document.getElementById("dashboard-logo").href = "index-receptionist.html";
+
+
+
         }
 
         if (retrievedRoles.toLowerCase().includes("patient")) {
@@ -120,6 +171,9 @@ $(document).ready(function ($) {
             $('.menu-reports').show();
             $('.menu-calls').show();
             $('.menu-activities').show()
+
+            document.getElementById("dashboard-menu").href = "index-2.html";
+            document.getElementById("dashboard-logo").href = "index-2.html";
         }
 
         if (retrievedRoles.toLowerCase().includes("admin")) {
@@ -139,6 +193,9 @@ $(document).ready(function ($) {
             $('.menu-assets').show();
             $('.menu-activities').show();
             $('.menu-reports').show();
+
+            document.getElementById("dashboard-menu").href = "index-2.html";
+            document.getElementById("dashboard-logo").href = "index-2.html";
         }
 
     }
