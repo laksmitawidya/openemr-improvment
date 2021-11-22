@@ -2,12 +2,13 @@
 <html lang="en">
 
 
-<!-- change-password24:06-->
+<!-- index22:59-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <title>Preclinic - Medical & Hospital - Bootstrap 4 Admin Template</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -22,7 +23,7 @@
         <div class="header">
 			<div class="header-left">
 				<a id="dashboard-logo" href="index-2.html" class="logo">
-					<img src="assets/img/logo.png" width="35" height="35" alt="">
+					<img src="assets/img/logo.png" width="35" height="35" alt=""> <span>OpenEMR</span>
 				</a>
 			</div>
 			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
@@ -40,7 +41,7 @@
                                     <a href="activities.html">
                                         <div class="media">
 											<span class="avatar">
-												<img alt="John Doe" src="assets/img/user.jpg" class="img-fluid rounded-circle">
+												<img alt="John Doe" src="assets/img/user.jpg" class="img-fluid">
 											</span>
 											<div class="media-body">
 												<p class="noti-details"><span class="noti-title">John Doe</span> added new task <span class="noti-title">Patient appointment booking</span></p>
@@ -105,9 +106,11 @@
                 </li>
                 <li class="nav-item dropdown has-arrow">
                     <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
-                        <span class="user-img"><img class="rounded-circle" src="assets/img/user.jpg" width="40" alt="Admin">
-							<span class="status online"></span></span>
-                        <span class="displayedUsername" />
+                        <span class="user-img">
+							<img class="rounded-circle" src="assets/img/user.jpg" width="24" alt="Admin">
+							<span class="status online"></span>
+						</span>
+						<span class="displayedUsername" />
                     </a>
 					<div class="dropdown-menu">
 						<a class="dropdown-item" href="profile.html">My Profile</a>
@@ -118,7 +121,7 @@
                 </li>
             </ul>
             <div class="dropdown mobile-user-menu float-right">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="profile.html">My Profile</a>
                     <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
@@ -129,41 +132,96 @@
         </div>
         <div class="sidebar" id="sidebar">
             <div class="sidebar-inner slimscroll">
-                <div class="sidebar-menu">
+                <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
-                        <li>
-                            <a id="dashboard-menu" href="index-2.html"><i class="fa fa-home back-icon"></i> <span>Back to Home</span></a>
-                        </li>
-                        <li class="menu-title">Settings</li>
-                        <li>
-                            <a href="settings.html"><i class="fa fa-building"></i> <span>Company Settings</span></a>
-                        </li>
-                        <li>
-                            <a href="localization.html"><i class="fa fa-clock-o"></i> <span>Localization</span></a>
-                        </li>
-                        <li>
-                            <a href="theme-settings.html"><i class="fa fa-picture-o"></i> <span>Theme Settings</span></a>
-                        </li>
-                        <li>
-                            <a href="roles-permissions.html"><i class="fa fa-key"></i> <span>Roles & Permissions</span></a>
-                        </li>
-                        <li>
-                            <a href="email-settings.html"><i class="fa fa-envelope-o"></i> <span>Email Settings</span></a>
-                        </li>
-                        <li>
-                            <a href="invoice-settings.html"><i class="fa fa-pencil-square-o"></i> <span>Invoice Settings</span></a>
-                        </li>
-                        <li>
-                            <a href="salary-settings.html"><i class="fa fa-money"></i> <span>Salary Settings</span></a>
-                        </li>
-                        <li>
-                            <a href="notifications-settings.html"><i class="fa fa-globe"></i> <span>Notifications</span></a>
-                        </li>
+                        <li class="menu-title">Main</li>
                         <li class="active">
-                            <a href="change-password.html"><i class="fa fa-lock"></i> <span>Change Password</span></a>
+                            <a id="dashboard-menu" href="index-2.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                        </li>
+						<li>
+                            <a href="doctors.html" class="menu-doctors"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
                         </li>
                         <li>
-                            <a href="leave-type.html"><i class="fa fa-cogs"></i> <span>Leave Type</span></a>
+                            <a href="patients.html" class="menu-patients"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
+                        </li>
+                        <li>
+                            <a href="appointments.html" class="menu-appointments"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
+                        </li>
+                        <li>
+                            <a href="schedule.html" class="menu-schedule"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span></a>
+                        </li>
+                        <li>
+                            <a href="departments.html" class="menu-departments"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
+                        </li>
+						<li class="submenu">
+							<a href="#" class="menu-employees"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="employees.html">Employees List</a></li>
+								<li><a href="leaves.html">Leaves</a></li>
+								<li><a href="holidays.html">Holidays</a></li>
+								<li><a href="attendance.html">Attendance</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="#" class="menu-accounts"><i class="fa fa-money"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="invoices.html">Invoices</a></li>
+								<li><a href="payments.html">Payments</a></li>
+								<li><a href="expenses.html">Expenses</a></li>
+								<li><a href="taxes.html">Taxes</a></li>
+								<li><a href="provident-fund.html">Provident Fund</a></li>
+							</ul>
+						</li>
+						<li class="submenu">
+							<a href="#" class="menu-payroll"><i class="fa fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="salary.html"> Employee Salary </a></li>
+								<li><a href="salary-view.html"> Payslip </a></li>
+							</ul>
+						</li>
+                        <li>
+                            <a href="chat.html" class="menu-chat"><i class="fa fa-comments"></i> <span>Chat</span> <span class="badge badge-pill bg-primary float-right">5</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class="menu-calls"><i class="fa fa-video-camera camera"></i> <span> Calls</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="voice-call.html">Voice Call</a></li>
+                                <li><a href="video-call.html">Video Call</a></li>
+                                <li><a href="incoming-call.html">Incoming Call</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class="menu-email"><i class="fa fa-envelope"></i> <span> Email</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="compose.html">Compose Mail</a></li>
+                                <li><a href="inbox.html">Inbox</a></li>
+                                <li><a href="mail-view.html">Mail View</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#" class="menu-blog"><i class="fa fa-commenting-o"></i> <span> Blog</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="blog-details.html">Blog View</a></li>
+                                <li><a href="add-blog.html">Add Blog</a></li>
+                                <li><a href="edit-blog.html">Edit Blog</a></li>
+                            </ul>
+                        </li>
+						<li>
+							<a href="assets.html" class="menu-assets"><i class="fa fa-cube"></i> <span>Assets</span></a>
+						</li>
+						<li>
+							<a href="activities.html" class="menu-activities"><i class="fa fa-bell-o"></i> <span>Activities</span></a>
+						</li>
+						<li class="submenu">
+							<a href="#" class="menu-reports"><i class="fa fa-flag-o"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="expense-reports.html"> Expense Report </a></li>
+								<li><a href="invoice-reports.html"> Invoice Report </a></li>
+							</ul>
+						</li>
+                        <li>
+                            <a href="settings.html"><i class="fa fa-cog"></i> <span>Settings</span></a>
                         </li>
                     </ul>
                 </div>
@@ -171,40 +229,227 @@
         </div>
         <div class="page-wrapper">
             <div class="content">
+               <!-- Widget -->
                 <div class="row">
-                    <div class="col-md-6 offset-md-3">
-                        <h4 class="page-title">Change Password</h4>
-                        <form>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label>Old password</label>
-                                        <input type="password" class="form-control">
-                                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                        <div class="dash-widget">
+							<span class="dash-widget-bg1"><i class="fa fa-stethoscope" aria-hidden="true"></i></span>
+							<div class="dash-widget-info text-right">
+								<h3>98</h3>
+								<span class="widget-title1">Doctors <i class="fa fa-check" aria-hidden="true"></i></span>
+							</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                        <div class="dash-widget">
+                            <span class="dash-widget-bg1"><i class="fa fa-briefcase"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>122</h3>
+                                <span class="widget-title1">Employee <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                        <div class="dash-widget">
+                            <span class="dash-widget-bg2 bg-danger"><i class="fa fa-money" aria-hidden="true"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>1</h3>
+                                <span class="widget-title2 bg-danger">Pending Expense <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+                        <div class="dash-widget">
+                            <span class="dash-widget-bg4"><i class="fa fa-heartbeat" aria-hidden="true"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>618</h3>
+                                <span class="widget-title4">Pending <i class="fa fa-check" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+               <!-- Widget -->
+               <!-- Chart -->
+				<div class="row">
+					<!-- <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+						<div class="card">
+							<div class="card-body">
+								<div class="chart-title">
+									<h4>Patient Total</h4>
+									<span class="float-right"><i class="fa fa-caret-up" aria-hidden="true"></i> 15% Higher than Last Month</span>
+								</div>	
+								<canvas id="linegraph"></canvas>
+							</div>
+						</div>
+					</div> -->
+					<div class="col-12 col-md-12 col-lg-12 col-xl-12">
+						<div class="card">
+							<div class="card-body">
+								<div class="chart-title">
+									<h4>Income/Expense</h4>
+									<div class="float-right">
+										<ul class="chat-user-total"> 
+											<li><i class="fa fa-circle text-success"  aria-hidden="true"></i>Income</li>
+											<li><i class="fa fa-circle text-danger" aria-hidden="true"></i> Expense</li>
+										</ul>
+									</div>
+								</div>	
+								<canvas id="bargraph-income-expense" width="1000" height="200"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+               <!-- Chart -->
+
+			   <!-- Expense  -->
+                <div class="row">
+					<div class="col-12 col-md-6 col-lg-8 col-xl-8">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title d-inline-block">Expense Report </h4> <a href="expense-reports.html" class="btn btn-primary float-right">View all</a>
+							</div>
+							<div class="card-block">
+								<div class="table-responsive">
+                                    <table class="table table-striped custom-table mb-0 ">
+                                        <thead>
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Purchase From</th>
+                                                <th>Purchase Date</th>
+                                                <th>Purchased By</th>
+                                                <th>Amount</th>
+                                                <th>Paid By</th>
+                                                <th class="text-center">Status</th>
+                                                <th class="text-right">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <strong>Anaesthetic machine</strong>
+                                                </td>
+                                                <td>Biomedical Equipment Inc</td>
+                                                <td>22 Jun 2018</td>
+                                                <td>Tarah Shropshire</td>
+                                                <td>$62480</td>
+                                                <td>Cheque</td>
+                                                <td class="text-center">
+                                                    <div class="dropdown action-label">
+                                                        <a class="custom-badge status-green dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                                            Approved
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item" href="#">Pending</a>
+                                                            <a class="dropdown-item" href="#">Approved</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-right">
+                                                    <div class="dropdown dropdown-action">
+                                                        <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item" href="edit-expense.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Stretcher</strong>
+                                                </td>
+                                                <td>Hospital Equipment Inc</td>
+                                                <td>17 Aug 2018</td>
+                                                <td>Loren Gatlin</td>
+                                                <td>$8048</td>
+                                                <td>Cash</td>
+                                                <td class="text-center">
+                                                    <div class="dropdown action-label">
+                                                        <a class="custom-badge status-red dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                                                            Pending
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item" href="#">Pending</a>
+                                                            <a class="dropdown-item" href="#">Approved</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-right">
+                                                    <div class="dropdown dropdown-action">
+                                                        <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item" href="edit-expense.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4 col-xl-4">
+						<div class="hospital-barchart">
+							<h4 class="card-title d-inline-block">Expense Status</h4>
+						</div>
+						<canvas id="doughnut-expense-status" ></canvas>
+					 </div>
+				</div>
+			   <!-- Expense  -->
+               <!-- Invoice  -->
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title d-inline-block">Invoice Report</h4> <a href="invoice-reports.html" class="btn btn-primary float-right">View all</a>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table mb-0 ">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Invoice Number</th>
+                                                <th>Client</th>
+                                                <th>Created Date</th>
+                                                <th>Due Date</th>
+                                                <th>Amount</th>
+                                                <th>Status</th>
+                                                <th class="text-right">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td><a href="invoice-view.html">#INV-0001</a></td>
+                                                <td>Global Technologies</td>
+                                                <td>1 Sep 2017</td>
+                                                <td>7 Sep 2017</td>
+                                                <td>$2099</td>
+                                                <td><span class="custom-badge status-green">Paid</span></td>
+                                                <td class="text-right">
+                                                    <div class="dropdown dropdown-action">
+                                                        <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                            <a class="dropdown-item" href="edit-invoice.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                                            <a class="dropdown-item" href="invoice-view.html"><i class="fa fa-eye m-r-5"></i> View</a>
+                                                            <a class="dropdown-item" href="#"><i class="fa fa-file-pdf-o m-r-5"></i> Download</a>
+                                                            <a class="dropdown-item" href="#"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label>New password</label>
-                                        <input type="password" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label>Confirm password</label>
-                                        <input type="password" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 text-center m-t-20">
-                                    <button type="button" class="btn btn-primary submit-btn">Update Password</button>
-                                </div>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
+              <!-- Invoice -->
+
             </div>
             <div class="notification-box">
                 <div class="msg-sidebar notifications msg-noti">
@@ -408,7 +653,6 @@
                                     </div>
                                 </a>
                             </li>
-
                         </ul>
                     </div>
                     <div class="topnav-dropdown-footer">
@@ -423,9 +667,12 @@
 	<script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/Chart.bundle.js"></script>
+    <script src="assets/js/chart.js"></script>
     <script src="assets/js/app.js"></script>
+
 </body>
 
 
-<!-- change-password24:06-->
+<!-- index22:59-->
 </html>
