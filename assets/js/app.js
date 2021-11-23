@@ -38,7 +38,6 @@ $(document).ready(function ($) {
     // Sidebar Initiate
     function setMenus() {
         // All menus are hidden
-        console.log("HEYO")
         $('.menu-doctors').hide();
         $('.menu-patients').hide();
         $('.menu-appointments').hide();
@@ -54,6 +53,8 @@ $(document).ready(function ($) {
         $('.menu-assets').hide();
         $('.menu-activities').hide();
         $('.menu-reports').hide();
+        $('.menu-profile').hide();
+        $('.patient-submenu').hide();
     }
 
     init();
@@ -62,27 +63,25 @@ $(document).ready(function ($) {
     $(document).on('click', 'form.form-signin', function () {
         let $selectedRole = $('.form-signin').find(":selected").text();
         let index = "index-2.html"
-        if($selectedRole.toLowerCase().includes("clinician")){
+        if ($selectedRole.toLowerCase().includes("clinician")) {
             index = "index-clinician.html"
         }
-        if($selectedRole.toLowerCase().includes("accountant")){
+        if ($selectedRole.toLowerCase().includes("accountant")) {
             index = "index-accountant.html"
         }
-        if($selectedRole.toLowerCase().includes("physician")){
+        if ($selectedRole.toLowerCase().includes("physician")) {
             index = "index-physician.html"
         }
-        if($selectedRole.toLowerCase().includes("receptionist")){
+        if ($selectedRole.toLowerCase().includes("receptionist")) {
             index = "index-receptionist.html"
         }
-        if($selectedRole.toLowerCase().includes("admin")){
+        if ($selectedRole.toLowerCase().includes("admin")) {
             index = "index-2.html"
         }
-        if($selectedRole.toLowerCase().includes("patient")){
-            index = "index-2.html"
+        if ($selectedRole.toLowerCase().includes("patient")) {
+            index = "index-patient.html"
         }
-
         document.getElementById('form-signin2').action = index;
-
 
     });
     $(document).on('submit', 'form.form-signin', function () {
@@ -90,8 +89,6 @@ $(document).ready(function ($) {
         const $selectedUsername = $('.form-signin').find('input[name="username"]').val();
         localStorage.setItem('roles', $selectedRole);
         localStorage.setItem('username', $selectedUsername);
-        
-       
     });
 
     $(document).on('click', '.logoutBtn', function () {
@@ -117,22 +114,22 @@ $(document).ready(function ($) {
 
             document.getElementById("dashboard-menu").href = "index-clinician.html";
             document.getElementById("dashboard-logo").href = "index-clinician.html";
-
         }
 
         if (retrievedRoles.toLowerCase().includes("physician")) {
-            $('.menu-doctors').show();
             $('.menu-schedule').show();
             $('.menu-appointments').show();
             $('.menu-chat').show();
             $('.menu-reports').show();
             $('.menu-calls').show();
             $('.menu-activities').show();
+            $('.menu-accounts').show();
+            $('.btnAddDoctor').hide();
+            $('.staff-msg').hide();
+            $('.menu-profile').show();
 
             document.getElementById("dashboard-menu").href = "index-physician.html";
             document.getElementById("dashboard-logo").href = "index-physician.html";
-
-
         }
 
         if (retrievedRoles.toLowerCase().includes("accountant")) {
@@ -144,12 +141,12 @@ $(document).ready(function ($) {
 
             document.getElementById("dashboard-menu").href = "index-accountant.html";
             document.getElementById("dashboard-logo").href = "index-accountant.html";
-
-            
         }
 
         if (retrievedRoles.toLowerCase().includes("receptionist")) {
             $('.menu-schedule').show();
+            $('.menu-doctors').show();
+            $('.menu-patients').show();
             $('.menu-appointments').show();
             $('.menu-chat').show();
             $('.menu-reports').show();
@@ -158,26 +155,25 @@ $(document).ready(function ($) {
 
             document.getElementById("dashboard-menu").href = "index-receptionist.html";
             document.getElementById("dashboard-logo").href = "index-receptionist.html";
-
-
-
         }
 
         if (retrievedRoles.toLowerCase().includes("patient")) {
-            $('.menu-schedule').show();
-            $('.menu-patients').show();
+            $('.menu-profile').show();
             $('.menu-appointments').show();
             $('.menu-chat').show();
             $('.menu-reports').show();
             $('.menu-calls').show();
-            $('.menu-activities').show()
+            $('.menu-activities').show();
+            $('.menu-accounts').show();
+            $('.btnAddDoctor').hide();
+            $('.staff-msg').hide();
+            $('.patient-submenu').show();
 
-            document.getElementById("dashboard-menu").href = "index-2.html";
-            document.getElementById("dashboard-logo").href = "index-2.html";
+            document.getElementById("dashboard-menu").href = "index-patient.html";
+            document.getElementById("dashboard-logo").href = "index-patient.html";
         }
 
         if (retrievedRoles.toLowerCase().includes("admin")) {
-            console.log("admin")
             $('.menu-doctors').show();
             $('.menu-patients').show();
             $('.menu-appointments').show();
