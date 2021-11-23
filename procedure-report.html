@@ -2,17 +2,15 @@
 <html lang="en">
 
 
-<!-- expenses23:25-->
+<!-- payments23:25-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     <title>Preclinic - Medical & Hospital - Bootstrap 4 Admin Template</title>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--[if lt IE 9]>
 		<script src="assets/js/html5shiv.min.js"></script>
@@ -138,7 +136,7 @@
                         <li>
                             <a id="dashboard-menu" href="index-2.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                         </li>
-						<li>
+						            <li>
                             <a href="doctors.html" class="menu-doctors"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
                         </li>
                         <li>
@@ -148,49 +146,49 @@
                             <a href="profile.html" class="menu-profile"><i class="fa fa-user"></i>
                                 <span>Profile</span></a>
                         </li>
-<li>
+                        <li>
                             <a href="appointments.html" class="menu-appointments"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
                         </li>
 
                         <li class="submenu">
-							<a href="#" class="menu-procedure"><i class="fa fa-file-powerpoint-o"></i> <span> Procedure </span> <span class="menu-arrow"></span></a>
-							<ul style="display: none;">
-								<li><a href="procedure-result.html">Patient Result </a></li>
-								<li><a href="procedure-report.html">Electronic Report</a></li>
-							</ul>
-						</li>
+                          <a href="#" class="menu-procedure"><i class="fa fa-file-powerpoint-o"></i> <span> Procedure </span> <span class="menu-arrow"></span></a>
+                          <ul style="display: none;">
+                            <li><a href="procedure-result.html">Patient Result </a></li>
+                            <li><a class="active" href="procedure-report.html">Electronic Report</a></li>
+                          </ul>
+                        </li>
                         <li>
                             <a href="schedule.html" class="menu-schedule"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span></a>
                         </li>
                         <li>
                             <a href="departments.html" class="menu-departments"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
                         </li>
-						<li class="submenu">
-							<a href="#" class="menu-employees"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
-							<ul style="display: none;">
-								<li><a href="employees.html">Employees List</a></li>
-								<li><a href="leaves.html">Leaves</a></li>
-								<li><a href="holidays.html">Holidays</a></li>
-								<li><a href="attendance.html">Attendance</a></li>
-							</ul>
-						</li>
-						<li class="submenu">
-							<a href="#" class="menu-accounts"><i class="fa fa-money"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
-							<ul style="display: none;">
-								<li><a href="invoices.html">Invoices</a></li>
-								<li><a href="payments.html">Payments</a></li>
-								<li><a class="active" href="expenses.html">Expenses</a></li>
-								<li><a href="taxes.html">Taxes</a></li>
-								<li><a href="provident-fund.html">Provident Fund</a></li>
-							</ul>
-						</li>
-						<li class="submenu">
-							<a href="#" class="menu-payroll"><i class="fa fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
-							<ul style="display: none;">
-								<li><a href="salary.html"> Employee Salary </a></li>
-								<li><a href="salary-view.html"> Payslip </a></li>
-							</ul>
-						</li>
+                        <li class="submenu">
+                          <a href="#" class="menu-employees"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
+                          <ul style="display: none;">
+                            <li><a href="employees.html">Employees List</a></li>
+                            <li><a href="leaves.html">Leaves</a></li>
+                            <li><a href="holidays.html">Holidays</a></li>
+                            <li><a href="attendance.html">Attendance</a></li>
+                          </ul>
+                        </li>
+                        <li class="submenu">
+                          <a href="#" class="menu-accounts"><i class="fa fa-money"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
+                          <ul style="display: none;">
+                            <li><a href="invoices.html">Invoices</a></li>
+                            <li><a href="payments.html">Payments</a></li>
+                            <li><a href="expenses.html">Expenses</a></li>
+                            <li><a href="taxes.html">Taxes</a></li>
+                            <li><a href="provident-fund.html">Provident Fund</a></li>
+                          </ul>
+                        </li>
+                        <li class="submenu">
+                          <a href="#" class="menu-payroll"><i class="fa fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
+                          <ul style="display: none;">
+                            <li><a href="salary.html"> Employee Salary </a></li>
+                            <li><a href="salary-view.html"> Payslip </a></li>
+                          </ul>
+                        </li>
                         <li>
                             <a href="chat.html" class="menu-chat"><i class="fa fa-comments"></i> <span>Chat</span> <span class="badge badge-pill bg-primary float-right">5</span></a>
                         </li>
@@ -242,166 +240,50 @@
         <div class="page-wrapper">
             <div class="content">
                 <div class="row">
-                    <div class="col-sm-8 col-5">
-                        <h4 class="page-title">Expenses</h4>
-                    </div>
-                    <div class="col-sm-4 col-7 text-right m-b-30">
-                        <a href="add-expense.html" class="btn btn-primary btn-rounded float-right"><i class="fa fa-plus"></i> Add Expense</a>
-                    </div>
-                </div>
-                <div class="row filter-row">
-                    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">Item Name</label>
-                            <input type="text" class="form-control floating">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <div class="form-group form-focus select-focus">
-                            <label class="focus-label">Purchased By</label>
-                            <select class="select floating">
-                                <option> -- Select -- </option>
-                                <option>Loren Gatlin</option>
-                                <option>Tarah Shropshire</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <div class="form-group form-focus select-focus">
-                            <label class="focus-label">Paid By</label>
-                            <select class="select floating">
-                                <option> -- Select -- </option>
-                                <option> Cash </option>
-                                <option> Cheque </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">From</label>
-                            <div class="cal-icon">
-                                <input class="form-control floating datetimepicker" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <div class="form-group form-focus">
-                            <label class="focus-label">To</label>
-                            <div class="cal-icon">
-                                <input class="form-control floating datetimepicker" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <a href="#" class="btn btn-success btn-block"> Search </a>
+                    <div class="col-sm-12">
+                        <h4 class="page-title">Procedure Electronic Report</h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="table-responsive">
-                            <table class="table table-striped custom-table mb-0 datatable">
+                            <table class="table table-striped custom-table datatable mb-0">
                                 <thead>
                                     <tr>
-                                        <th>Item</th>
-                                        <th>Purchase From</th>
-                                        <th>Purchase Date</th>
-                                        <th>Purchased By</th>
-                                        <th>Amount</th>
-                                        <th>Paid By</th>
-                                        <th class="text-center">Status</th>
-                                        <th class="text-right">Actions</th>
+                                        <th colspan="2">Patient</th>
+                                        <th colspan="2">Ordner</th>
+                                        <th colspan="2">Procedure</th>
+                                        <th colspan="2">Report</th>
+
+
+
+                                    </tr>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>ID</th>
+                                        <th>Date</th>
+                                        <th>ID</th>
+                                        <th>Code</th>
+                                        <th>Description</th>
+                                        <th>Report</th>
+                                        <th>Status</th>
+        
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
-                                            <strong>Stretcher</strong>
-                                        </td>
-                                        <td>Hospital Equipment Inc</td>
-                                        <td>17 Aug 2018</td>
-                                        <td>Loren Gatlin</td>
-                                        <td>$8048</td>
-                                        <td>Cash</td>
-                                        <td class="text-center">
-                                            <div class="dropdown action-label">
-                                                <a class="custom-badge status-red dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                    Pending
-                                                </a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#">Pending</a>
-                                                    <a class="dropdown-item" href="#">Approved</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="dropdown dropdown-action">
-                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="edit-expense.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_expense"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <strong>Anaesthetic machine</strong>
-                                        </td>
-                                        <td>Biomedical Equipment Inc</td>
-                                        <td>22 Jun 2018</td>
-                                        <td>Tarah Shropshire</td>
-                                        <td>$62480</td>
-                                        <td>Cheque</td>
-                                        <td class="text-center">
-                                            <div class="dropdown action-label">
-                                                <a class="custom-badge status-green dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                    Approved
-                                                </a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#">Pending</a>
-                                                    <a class="dropdown-item" href="#">Approved</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="dropdown dropdown-action">
-                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="edit-expense.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_expense"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-									<tr>
-                                        <td>
-                                            <strong>Aspiration/Suction Pump</strong>
-                                        </td>
-                                        <td>Medi Pro Service</td>
-                                        <td>24 Jul 2018</td>
-                                        <td>Tarah Shropshire</td>
-                                        <td>$3250</td>
-                                        <td>Cheque</td>
-                                        <td class="text-center">
-                                            <div class="dropdown action-label">
-                                                <a class="custom-badge status-green dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                    Approved
-                                                </a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#">Pending</a>
-                                                    <a class="dropdown-item" href="#">Approved</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="dropdown dropdown-action">
-                                                <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                                <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="edit-expense.html"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_expense"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td>Jhon Doe</td>
+                                        <td>001</td>
+                                        <td>10-10-2021</td>
+                                        <td>001</td>
+                                        <td>0110</td>
+                                        <td>Glucose</td>
+                                        <td>Glucosa Low</td>
+                                        <td>Final</td>
+               
+
+
                                     </tr>
                                 </tbody>
                             </table>
@@ -619,19 +501,6 @@
                 </div>
             </div>
         </div>
-		<div id="delete_expense" class="modal fade delete-modal" role="dialog">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-body text-center">
-						<img src="assets/img/sent.png" alt="" width="50" height="46">
-						<h3>Are you sure want to delete this expense?</h3>
-						<div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
-							<button type="submit" class="btn btn-danger">Delete</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
     </div>
     <div class="sidebar-overlay" data-reff=""></div>
     <script src="assets/js/jquery-3.2.1.min.js"></script>
@@ -640,12 +509,9 @@
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/dataTables.bootstrap4.min.js"></script>
     <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 
 
-<!-- expenses23:26-->
+<!-- payments23:25-->
 </html>

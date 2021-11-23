@@ -55,6 +55,8 @@ $(document).ready(function ($) {
         $('.menu-reports').hide();
         $('.menu-profile').hide();
         $('.patient-submenu').hide();
+        $('.menu-procedure').hide();
+
     }
 
     init();
@@ -111,6 +113,8 @@ $(document).ready(function ($) {
             $('.menu-chat').show();
             $('.menu-reports').show();
             $('.menu-calls').show();
+            $('.menu-procedure').show();
+
 
             document.getElementById("dashboard-menu").href = "index-clinician.html";
             document.getElementById("dashboard-logo").href = "index-clinician.html";
@@ -127,6 +131,8 @@ $(document).ready(function ($) {
             $('.btnAddDoctor').hide();
             $('.staff-msg').hide();
             $('.menu-profile').show();
+            $('.menu-procedure').show();
+
 
             document.getElementById("dashboard-menu").href = "index-physician.html";
             document.getElementById("dashboard-logo").href = "index-physician.html";
@@ -189,6 +195,8 @@ $(document).ready(function ($) {
             $('.menu-assets').show();
             $('.menu-activities').show();
             $('.menu-reports').show();
+            $('.menu-procedure').show();
+
 
             document.getElementById("dashboard-menu").href = "index-2.html";
             document.getElementById("dashboard-logo").href = "index-2.html";
